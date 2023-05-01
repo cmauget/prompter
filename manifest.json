@@ -1,0 +1,37 @@
+{
+
+  "manifest_version": 2,
+  "name": "Prompter",
+  "version": "1.0",
+
+  "description": "Generate easy prompt for ChatGPT",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "prompter.html",
+    "default_icon": {
+        "48": "icons/border-48.png"
+    }
+  },
+
+  "permissions": [
+    "clipboardWrite",
+    "<all_urls>"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "prompter.js"
+      ]
+    }
+  ]
+
+}
